@@ -1,0 +1,147 @@
+/* Для очень маленьких устройств. */
+@media only screen and (max-width: 600px)
+{
+   body {
+       background-color: #FF0000;
+   }
+}
+
+/* Для маленьких устройств. */
+@media only screen and (min-width: 600px)
+{
+    body {
+        background-color: #a87474;
+    }
+}
+
+/* Для мобильных устройств. */
+@media only screen and (min-width: 768px)
+{
+    body
+    {
+        background-color: #edeef0;
+    }
+}
+
+/* Для больших устройств. */
+@media only screen and (min-width: 992px)
+{
+    body
+    {
+        margin: 0px;
+        background-color: #373ebb;
+    }
+}
+
+/* Для ноутбука и компьютеров. */
+@media only screen and (min-width: 1200px)
+{
+    body {
+        background-color: #edeef0;
+    }
+    p {
+
+    }
+    h1, h2, h3, h4, h5 {
+        margin: 0px;
+    }
+    form {
+        margin: 0px;
+    }
+    .wrapaper {
+        width: 100%;
+        height: auto;
+    }
+    .header {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .menu {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+    .menu-block {
+
+    }
+    .menu-full {
+        display: none;
+    }
+    .menu-block:hover .menu-full{
+        display: block;
+    }
+    .menu-block-sub {
+
+    }
+    .menu-full-sub {
+        display: none;
+    }
+    .menu-block-sub:hover .menu-full-sub{
+        display: block;
+    }
+    .btn {
+
+    }
+    .btn:hover {
+
+    }
+    .alert {
+        width: 70%;
+        margin: auto;
+        height: 60px;
+    }
+    .info {
+        background-color: #39d0bf;
+    }
+    .warning {
+        background-color: #d38443;
+    }
+    .danger {
+        background-color: #7a0000;
+    }
+    .main {
+        width: 100%;
+        height: auto;
+    }
+    .infoRoute {
+        width: 100%;
+        height: 60px;
+        background-color: #39d0bf;
+    }
+    .container {
+        width: 99%;
+        margin: auto;
+        height: auto;
+        background-color: #84599a;
+        display: flex;
+        justify-content: space-between;
+    }
+    .container-block {
+        width: 300px;
+        height: 300px;
+        background-color: #FF0000;
+    }
+    .container-block-header {
+
+    }
+    .container-block-main {
+
+    }
+    .container-block-footer {
+
+    }
+    .footer {
+        text-align: center;
+    }
+
+    .login-form {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        margin-top: 70px;
+        background-color: #FF0000;
+    }
+}

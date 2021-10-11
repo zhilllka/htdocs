@@ -1,0 +1,6 @@
+{
+    "require": {
+        "krugozor/database": "^2.0",
+        "curl/curl": "^2.3"
+    }
+}
