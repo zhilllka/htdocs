@@ -1,12 +1,12 @@
 <html>
 <head>
     <title>База данных</title>
-    <link rel="stylesheet" href=<?php echo $HOME['style']; ?>>
+    <link rel="stylesheet" href=<?php echo $GLOBALS['HOME']['style']; ?>>
 </head>
 <body>
 <div class="wrapaper">
 
-    <?php include $HOME['dir'].'/system/pages/header.php'; ?>
+    <?php include $GLOBALS['HOME']['dir'].'/system/pages/header.php'; ?>
 
     <div class="main">
         <div class="infoRoute">
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <?php include $HOME['dir'].'/system/pages/footer.php'; ?>
+    <?php include $GLOBALS['HOME']['dir'].'/system/pages/footer.php'; ?>
 
 </div>
 </body>
