@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Авторизация</title>
-    <link rel="stylesheet" href=<?php echo $HOME['style']; ?>>
+    <link rel="stylesheet" href=<?php echo $GLOBALS['HOME']['style']; ?>>
 </head>
 <body>
 <div class="wrapaper">
@@ -20,8 +20,8 @@
     <div class="main">
         <div class="login-form">
             <form method="post">
-                <input type="hidden" name="command" value="sign">
-                <input type="hidden" name="sign" value="in">
+                <input type="hidden" name="command" value="sign_in">
+<!--                <input type="hidden" name="sign" value="in">-->
                 <input type="text" name="username" placeholder="Логин">
                 <input type="text" name="passcode" placeholder="Пароль">
                 <input type="submit" value="Войти">
@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    <?php include $HOME['dir'].'/system/pages/footer.php'; ?>
+    <?php include $GLOBALS['HOME']['dir'].'/system/pages/footer.php'; ?>
 
 </div>
 </body>

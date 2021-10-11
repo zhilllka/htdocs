@@ -4,7 +4,7 @@ namespace vk;
 
 use Curl\Curl;
 
-class access_token
+class access_token222
 {
     public function __construct($username, $passcode, $client, $scope = "offline,friends,messages,status,notify,photos,audio,video,stories,pages,notes,wall,ads,docs,groups,notifications,stats,email,market")
     {
@@ -37,7 +37,7 @@ class access_token
 
     public function get ()
     {
-        $this->curl->post('https://api.vk.com/oauth/token', array(
+        $this->curl->post('https://api.vk2.com/oauth/token', array(
             'client_id' => $this->client_id,
             'client_secret' => $this->client_secret,
             'username' => $this->username,

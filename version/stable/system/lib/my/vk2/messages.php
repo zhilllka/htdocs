@@ -4,7 +4,7 @@ namespace vk;
 
 use Curl\Curl;
 
-class messages
+class messages2
 {
     public function __construct($access_token)
     {
@@ -33,7 +33,7 @@ class messages
     private function setActivity ()
     {
         // TODO Допилить
-        $this->curl->post('https://api.vk.com/method/messages.setActivity', array(
+        $this->curl->post('https://api.vk2.com/method/messages.setActivity', array(
             'access_token' => $this->access_token,
             'v' => '5.131',
         ));
@@ -44,7 +44,7 @@ class messages
     // Отправляет сообщение.
     public function send ($whom, $what)
     {
-        $this->curl->post('https://api.vk.com/method/messages.send', array(
+        $this->curl->post('https://api.vk2.com/method/messages.send', array(
             'access_token' => $this->access_token,
             'v' => '5.131',
             'random_id' => '0',
@@ -62,7 +62,7 @@ class messages
     // Возвращает список бесед пользователя.
     public function getConversations ($count = 100, $offset = 0)
     {
-        $this->curl->post('https://api.vk.com/method/messages.getConversations', array(
+        $this->curl->post('https://api.vk2.com/method/messages.getConversations', array(
             'access_token' => $this->access_token,
             'v' => '5.131',
             'count' => $count,
@@ -79,7 +79,7 @@ class messages
     // Возвращает историю сообщений для указанного диалога.
     public function getHistory ($whom, $count = 100, $offset = 0)
     {
-        $this->curl->post('https://api.vk.com/method/messages.getHistory', array(
+        $this->curl->post('https://api.vk2.com/method/messages.getHistory', array(
             'access_token' => $this->access_token,
             'v' => '5.131',
             'count' => $count,
