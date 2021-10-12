@@ -1,5 +1,6 @@
 <?php
 
+include $_SERVER['DOCUMENT_ROOT'].'/version/stable/system/lib/autoload.php';
 use Telegram\Bot\Api;
 
 $telegram = new Api('2040488631:AAEZTOOEqr7vscMFIW4l2YshFgp0VMMSeA8'); //Устанавливаем токен, полученный у BotFather
