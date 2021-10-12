@@ -8,7 +8,7 @@ session_start();
 //$_SESSION['user']['passcode'] = 'root';
 //$_SESSION['user']['authVersion'] = 'stable';
 //$_SESSION['user']['routeNow'] = 'signIn';
-$_SESSION = array();
+//$_SESSION = array();
 
 
 ini_set('error_reporting', E_ALL);
