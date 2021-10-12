@@ -1,3 +1,7 @@
+<?php
+// Проверка на целостность файловой структуры.
+if(!defined("integrity_protection")) {require_once $_SERVER['DOCUMENT_ROOT'].'/version/stable/system/pages/error/404.php';exit();}
+?>
 <html>
 <head>
     <title>База данных</title>
@@ -17,7 +21,7 @@
             <table class='table'>
                 <thead>
                 <tr>
-                    <th>id</th>
+                    <th>№</th>
                     <th>Сеть</th>
                     <th>Логин</th>
                     <th>Пароль</th>

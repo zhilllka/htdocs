@@ -92,6 +92,8 @@
                     </ul>
                 </li>
 
+
+<!--                БАЗА ДАННЫХ-->
                 <li>
                     <form method="post">
                         <input type="hidden" name="command" value="route">
@@ -100,6 +102,16 @@
                     </form>
                 </li>
 
+<!--            Атаковать-->
+                <li>
+                    <form method="post">
+                        <input type="hidden" name="command" value="route">
+                        <input type="hidden" name="command_more" value="atack/main">
+                        <button type="submit">Атаковать</button>
+                    </form>
+                </li>
+
+<!--                НАСТРОЙКИ-->
                 <li>
                     <form method="post">
                         <input type="hidden" name="command" value="route">
@@ -119,6 +131,7 @@
                     </ul>
                 </li>
 
+<!--                 О ПРОГРАММЕ-->
                 <li>
                     <form method="post">
                         <input type="hidden" name="command" value="route">

@@ -1,5 +1,12 @@
 <?php
 
+//// Проверка на целостность файловой структуры.
+//if(!defined("integrity_protection")) {require_once 'version/stable/system/pages/error/404.php';exit();}
+
+// Константа целостности файловой структуры.
+define("integrity_protection", true);
+
+
 
 $GLOBALS['HOME'] = [
     'dir' => __DIR__,
