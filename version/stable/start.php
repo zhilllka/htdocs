@@ -49,7 +49,7 @@ if (!include $GLOBALS['HOME']['dir'].'/system/lib/autoload.php') {
   exit;
 }
 
-$_SESSION['user'] = [];
+
 
 
 //include $GLOBALS['HOME']['dir'].'/system/logic/telegramBot.php';
