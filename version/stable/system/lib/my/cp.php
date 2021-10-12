@@ -17,8 +17,20 @@ class database
     }
 
 
-    public function get_seeds ()
+    public function get ($method, $from, $where, $what = '*')
     {
+        if ($method == 'array')
+        {
+            $result = $this->connect()->query("SELECT $what FROM `$from` WHERE $where", 30);
+            $result = $result->fetchAssocArray();
+            return $result;
+        }
+        else
+        {
+            $result = $this->connect()->query("SELECT $what FROM `$from` WHERE $where", 30);
+            $result = $result->fetchAssoc();
+            return $result;
+        }
 
     }
 }
@@ -93,6 +105,9 @@ class profile
 
                     // Добавляем ключ авторизации в сессию.
                     $_SESSION['user']['authKey'] = $authKey;
+
+                    // Добавляем id пользователя в сессию.
+                    $_SESSION['user']['id'] = $db_user['id'];
 
                     // Отправляем на рабочий стол.
                     $_SESSION['user']['routeNow'] = "desktop/main";

@@ -1,106 +1,136 @@
 <div class="header">
-    <div class="menu">
 
-<!--        ГЛАВНАЯ-->
+    <div class="header-menu">
 
-        <div class="menu-block">
-            <form method="post">
+        <div class="header-logo">
+            <form method="post" class="header-logo-form">
                 <input type="hidden" name="command" value="route">
                 <input type="hidden" name="command_more" value="desktop/main">
-                <input class="btn" type="submit" value="Главная" title=""></input>
+                <button class="header-logo-form-button" type="submit">
+                    <img class="header-logo-form-button-img" src=<?php echo 'version/'.$_SESSION['user']['authVersion'].'/system/pages/assets/img/ico/512x512.png'; ?>>
+                    <p class="header-logo-form-button-text">ilk.in</p>
+                </button>
             </form>
         </div>
 
-<!--        ПРОФИЛЬ-->
+        <nav>
+            <ul>
 
-        <div class="menu-block">
-            <form method="post">
-                <input type="hidden" name="command" value="route">
-                <input type="hidden" name="command_more" value="profile/main">
-                <input class="btn" type="submit" value="Профиль" title=""></input>
-            </form>
-            <div class="menu-full">
-<!--                <form method="post">-->
-<!--                    <input type="hidden" name="command" value="route">-->
-<!--                    <input type="hidden" name="route" value="dbStat">-->
-<!--                    <input class="btn submit-desktop" type="submit" value="Редактировать" title=""></input>-->
-<!--                </form>-->
-<!--                <form method="post">-->
-<!--                    <input type="hidden" name="command" value="route">-->
-<!--                    <input type="hidden" name="route" value="dbRemote">-->
-<!--                    <input class="btn submit-desktop" type="submit" value="Настройки" title=""></input>-->
-<!--                </form>-->
-                <form method="post">
-                    <input type="hidden" name="command" value="sign_out">
-                    <input type="hidden" name="command_more" value="">
-                    <input class="btn submit-desktop" type="submit" value="Выйти" title=""></input>
-                </form>
-            </div>
-        </div>
-
-<!--        БАЗА ДАННЫХ-->
-
-        <div class="menu-block">
-            <form method="post">
-                <input type="hidden" name="command" value="route">
-                <input type="hidden" name="command_more" value="database/main">
-                <input class="btn" type="submit" value="База данных" title=""></input>
-            </form>
-<!--            <div class="menu-full">-->
-<!--                <form method="post">-->
-<!--                    <input type="hidden" name="command" value="route">-->
-<!--                    <input type="hidden" name="route" value="dbStat">-->
-<!--                    <input class="btn submit-desktop" type="submit" value="Статистика" title=""></input>-->
-<!--                </form>-->
-<!--                <form method="post">-->
-<!--                    <input type="hidden" name="command" value="route">-->
-<!--                    <input type="hidden" name="route" value="dbRemote">-->
-<!--                    <input class="btn submit-desktop" type="submit" value="Управление" title=""></input>-->
-<!--                </form>-->
-<!--                <form method="post">-->
-<!--                    <input type="hidden" name="command" value="route">-->
-<!--                    <input type="hidden" name="route" value="dbDelete">-->
-<!--                    <input class="btn submit-desktop" type="submit" value="Удалить" title=""></input>-->
-<!--                </form>-->
-<!--            </div>-->
-        </div>
-
-<!--        СЕРВИСЫ-->
-
-        <div class="menu-block">
-            <form method="post">
-                <input type="hidden" name="command" value="route">
-                <input type="hidden" name="route" value="services/main">
-                <input class="btn" type="submit" value="Сервисы" title=""></input>
-            </form>
-            <div class="menu-full">
-                <div class="menu-block-sub">
+<!--            РАБОЧИЙ СТОЛ-->
+                <li>
                     <form method="post">
                         <input type="hidden" name="command" value="route">
-                        <input type="hidden" name="route" value="dbStat">
-                        <input class="btn submit-desktop" type="submit" value="ВК" title=""></input>
+                        <input type="hidden" name="command_more" value="desktop/main">
+                        <button type="submit"><i class="fa-desktop"></i>Рабочий стол</button>
                     </form>
-                    <div class="menu-full-sub">
-                        <form method="post">
-                            <input type="hidden" name="command" value="route">
-                            <input type="hidden" name="route" value="atack/vk/getToken">
-                            <input class="btn submit-desktop" type="submit" value="Получить токен" title=""></input>
-                        </form>
-                    </div>
-                </div>
-                <form method="post">
-                    <input type="hidden" name="command" value="route">
-                    <input type="hidden" name="route" value="dbRemote">
-                    <input class="btn submit-desktop" type="submit" value="Управление" title=""></input>
-                </form>
-                <form method="post">
-                    <input type="hidden" name="command" value="route">
-                    <input type="hidden" name="route" value="dbDelete">
-                    <input class="btn submit-desktop" type="submit" value="Удалить" title=""></input>
-                </form>
-            </div>
-        </div>
+
+                    <ul>
+
+                        <li>
+                            <form method="post">
+                                <input type="hidden" name="command" value="route">
+                                <input type="hidden" name="command_more" value="desktop/edit">
+                                <button type="submit" disabled>Изменить</button>
+                            </form>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+<!--            ПРОФИЛЬ-->
+                <li>
+
+                    <form method="post">
+                        <input type="hidden" name="command" value="route">
+                        <input type="hidden" name="command_more" value="profile/main">
+                        <button type="submit"><i class="bi-person-circle"></i>Профиль</button>
+                    </form>
+
+                    <ul>
+                        <li>
+                            <form method="post">
+                                <input type="hidden" name="command" value="route">
+                                <input type="hidden" name="command_more" value="profile/edit">
+                                <button type="submit">Изменить</button>
+                            </form>
+                        </li>
+
+                        <li>
+                            <form method="post">
+                                <input type="hidden" name="command" value="route">
+                                <input type="hidden" name="command_more" value="profile/main">
+                                <button type="submit"><i class="bi-people-fill"></i>Друзья</button>
+                            </form>
+
+                            <ul>
+                                <li>
+                                    <form method="post">
+                                        <input type="hidden" name="command" value="route">
+                                        <input type="hidden" name="command_more" value="profile/edit">
+                                        <button type="submit"><i class="bi-person-plus-fill"></i>Добавить</button>
+                                    </form>
+                                </li>
+
+                                <li>
+                                    <form method="post">
+                                        <input type="hidden" name="command" value="route">
+                                        <input type="hidden" name="command_more" value="profile/edit">
+                                        <button type="submit"><i class="bi-person-dash-fill"></i>Удалить</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <form method="post">
+                                <input type="hidden" name="command" value="sign_out">
+                                <input type="hidden" name="command_more" value="sign_out">
+                                <button type="submit">Выйти</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <form method="post">
+                        <input type="hidden" name="command" value="route">
+                        <input type="hidden" name="command_more" value="database/main">
+                        <button type="submit">База данных</button>
+                    </form>
+                </li>
+
+                <li>
+                    <form method="post">
+                        <input type="hidden" name="command" value="route">
+                        <input type="hidden" name="command_more" value="settings/main">
+                        <button type="submit"><i class="bi-key-fill"></i>Настройки</button>
+                    </form>
+
+                    <ul>
+                        <li>
+                            <form method="post">
+                                <input type="hidden" name="command" value="route">
+                                <input type="hidden" name="command_more" value="profile/edit">
+                                <button type="submit"><i class="bi-shield-fill"></i>Безопасность</button>
+                            </form>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <form method="post">
+                        <input type="hidden" name="command" value="route">
+                        <input type="hidden" name="command_more" value="about/main">
+                        <button type="submit">О программе</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
     </div>
+
+
 
 
     <?php

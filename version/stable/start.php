@@ -4,7 +4,7 @@
 $GLOBALS['HOME'] = [
     'dir' => __DIR__,
     'style' => 'version/'.basename(__DIR__).'/system/pages/assets/css/style.css',
-    'version' => '<strong></strong> 0.0.2 ALPHA | <strong>date:</strong> 12.10.2021',
+    'version' => '<strong></strong> 0.0.3 ALPHA | <strong>date:</strong> 12.10.2021',
     'changeLog' => '
     ..:: ЖУРНАЛ ::.
     1. Первая стабильная версия сайта.

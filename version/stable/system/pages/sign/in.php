@@ -2,6 +2,7 @@
 <head>
     <title>Авторизация</title>
     <link rel="stylesheet" href=<?php echo $GLOBALS['HOME']['style']; ?>>
+    <link rel="shortcut icon" href=<?php echo $GLOBALS['HOME']['styleIco']; ?> type="image/png">
 </head>
 <body>
 <div class="wrapaper">

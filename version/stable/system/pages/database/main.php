@@ -10,27 +10,48 @@
 
     <div class="main">
         <div class="infoRoute">
-            <h2>Главная страница</h2>
-            <h4>Туц туц туц</h4>
+            <h2>База данных</h2>
+            <h4>Управляйте Вашими данными в удобной форме и в одном месте.</h4>
         </div>
         <div class="container">
-            <?php
-
-            $result = $GLOBALS['db']->query("SELECT * FROM `seeds` WHERE id_refferal = '".$_SESSION['user']['id']."'", 30);
-            $result = $result->fetchAssocArray();
-
-            foreach ($result as $result) {
-                echo "
-                
-                <table>
-                <p><text>$result[id]</text> | <text>$result[network]</text> | <text>$result[login]</text> | <text>$result[password]</text></p>
-                </table>
-                
-                
-                ";
-            }
-
-            ?>
+            <table class='table'>
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Сеть</th>
+                    <th>Логин</th>
+                    <th>Пароль</th>
+                    <th>Токен</th>
+                    <th>Управление</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                $db = new \cp\database();
+                $seeds = $db->get('array','seeds','id_reff = '.$_SESSION['user']['id']);
+                foreach ($seeds as $seeds)
+                {
+                    echo "
+                    
+                    <tr>
+                        <td>$seeds[id]</td>
+                        <td>$seeds[network]</td>
+                        <td>$seeds[username]</td>
+                        <td>$seeds[passcode]</td>
+                        <td><textarea cols='50'>$seeds[access_token]</textarea> </td>
+                        <td>
+                            <form method='post'>
+                                <input type='hidden' name='command_more' value='$seeds[id]'>
+                                <button type='submit' name='command' value=view_$seeds[network]>GO</button>
+                            </form>
+                        </td>
+                    </tr>
+                    
+                    ";
+                }
+                ?>
+                </tbody>
+            </table>
         </div>
     </div>
 
