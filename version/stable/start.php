@@ -49,10 +49,16 @@ if (!include $GLOBALS['HOME']['dir'].'/system/lib/autoload.php') {
   exit;
 }
 
+$_SESSION['user'] = [];
+
+
+//include $GLOBALS['HOME']['dir'].'/system/logic/telegramBot.php';
+
+
 // Подключаем ядро сайта.
-if (!include $GLOBALS['HOME']['dir'].'/system/logic/core.php') {
-  // Если не удалось подключить ядро сайта, выводим сообщение.
-  echo "ОШИБКА: Не удалось подключить ядро сайта в версии: ".$GLOBALS['HOME']['version'].".";
-  // Завершаем скрипт.
-  exit;
-}
+//if (!include $GLOBALS['HOME']['dir'].'/system/logic/core.php') {
+//  // Если не удалось подключить ядро сайта, выводим сообщение.
+//  echo "ОШИБКА: Не удалось подключить ядро сайта в версии: ".$GLOBALS['HOME']['version'].".";
+//  // Завершаем скрипт.
+//  exit;
+//}
